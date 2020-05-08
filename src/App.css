@@ -19,26 +19,18 @@
   top:26px;
   right:21px;
 }
-.fs,.se{
-  width:604px;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 190px;
-  margin-top:133px;
-}
-.fs>div,.se>div{
-  /* width:120px;
-  height:139px; */
+.ico{
   display: flex;
   flex-direction: column;
+  color: #00796A ;
   align-items: center;
-  color: #00796A;
+  margin-top: 133px;
 }
-.main>div img{
-  width:119px;
-  height:119px;
-}
-.alert{
+
+
+
+
+.alert,.alertTwo{
   height:387px;
   width: 100%;
   background-color: #fff;
@@ -55,7 +47,7 @@
   border-bottom: 1px solid rgba(233, 233, 233, 1);
   padding: 0 21px;
 }
-.alert div:last-child{
+.alert div:last-child,.alertTwo>div:last-child{
   width: 978px;
   height:315px;
   background-image: url(./images/bgi2.png);
@@ -71,19 +63,22 @@
   display: table;
   content: '';
 }
-.point{
-  cursor: pointer;
+.point,.three img,.threeSm img{
+  cursor: pointer !important;
 }
+
 .three{
-  width:auto !important;
+  width:660px !important;
   text-align: center;
   margin: 33px auto !important;
 }
 .one{
+  width: 266px;
   margin: 0px auto !important;
   margin-top:147px !important;
 }
 .One{
+  width: 266px;
   margin: 0px auto !important;
   margin-top:58px !important;
 }
@@ -95,7 +90,114 @@
   width:483px !important;
   height:auto !important;
   text-align: center;
-  margin: 20px  !important;
+  margin: 33px  30px !important;
   display: flex;
   justify-content: space-between;
+}
+/* 配置样式 */
+.PZcontainer{
+  width:1024px;
+  height:768px;
+  margin:0 auto;
+  background-image: url('./images/bgi.png');
+  position: relative;
+}
+.PZheader{
+  height:76px;
+  line-height: 76px;;
+  background-color:#00796A ;
+  text-align: center;
+  color:white;
+  font-size: 28px;
+  position: relative;
+}
+
+/* 配置IP表格样式重写 */
+.ant-spin-nested-loading{
+  width: 976px;
+  margin:58px auto;
+  box-shadow:0px 0px  10px 1px #aaa;
+}
+.ant-pagination,.ant-table-pagination,.ant-table-pagination-right{
+  display: none;
+}
+.ant-table-tbody tr td:last-child{
+  color:#00796A;
+  cursor: pointer;
+}
+/* 配置添加框 */
+.AddContainer{
+  width: 100%;
+  height:100%;
+  background-color:rgba(36,36,36,0.2);
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+.AddContainer::before{
+  display: table;
+  content: '';
+}
+.PeiZhiAdd{
+  width:548px;
+  height:436px;
+  background-color:rgba(244,244,244,1);
+  border-radius: 4px;
+  margin:182px auto;
+}
+.PeiZhiAdd::before,.PeiZhiAdd::after{
+  display: table;
+  content: '';
+}
+.PeiZhiAdd>span:first-child{
+  color: #3D8FEC;
+  font-size:15px;
+  float: left;
+  margin: 25px 20px;
+}
+.PeiZhiAddTit{
+  width: 103px;
+  color: #333333;
+  font-size:20px;
+  display: block;
+  margin:0 auto;
+  margin-top:18px;
+  font-family:'SourceHanSansSC-Normal';
+}
+.PeiZhiMain{
+  width:494px;
+  height:352px;
+  background-color:rgba(255,255,255,1);
+  margin:22px auto;
+  border-radius: 2px;
+}
+.PeiZhiMain .input{
+  width: 100%;
+  height:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid rgba(228, 228, 228, 1);
+  color:#333333;
+}
+.PeiZhiMain div label{
+  margin-left:23px;
+}
+.PeiZhiMain div input{
+  margin-right:23px;
+  text-align: right;
+  border:0px;
+  border-bottom:1px solid rgba(228, 228, 228, 1);
+  outline: none;
+}
+.AddSub{
+  width:160px;
+  height:48px;
+  line-height: 48px;
+  border-radius:25px;
+  background-color: #FF8232;
+  font-size:20px;
+  color: #fff;
+  text-align: center;
+  margin:31px auto;
 }

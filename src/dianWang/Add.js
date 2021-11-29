@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 export default class Add extends Component {
     constructor(props){
-        console.log(props.getMsg)
         super(props)
         this.state={
             isAdd:false,

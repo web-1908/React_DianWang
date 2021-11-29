@@ -9,11 +9,10 @@ export default class PeiZhi extends Component {
         super(props)
         this.state={
             isAdd:false,
-            //接收子组件传来的值
-            name:'',
-            type:'',
-            IPaddress:'',
-            MACaddress:'',
+            //表数据
+            data:[],
+            //key值
+            key:-1,
         }
     }
     isAdd(){
@@ -22,9 +21,18 @@ export default class PeiZhi extends Component {
     
     //接收子组件传来的参数de函数,将该函数绑定在子组件上传过去让子组件调用传参！
     getMsg=(name,type,IPaddress,MACaddress)=>{
-        console.log(name,type,IPaddress,MACaddress)
-        this.setState({name,type,IPaddress,MACaddress});
+        this.state.key+=1;
+        this.state.data.push({
+                    key:this.state.key,
+                    name,
+                    type,
+                    IPaddress,
+                    MACaddress,
+                    time:'2020-5-1',
+        })
+        this.setState({})
     }
+
     render() {
           
         return (
@@ -32,7 +40,7 @@ export default class PeiZhi extends Component {
                 <div className='PZheader'>
                     <Row justify="space-between">
                         <Col span={3}>
-                            <img className='point' src={require("../images/back.png")} alt=""/>
+                            <img className='point' src={require("../images/back.png")} alt="" onClick={()=>{this.props.history.go(-1)}}/>
                         </Col>
                         <Col span={5}>
                             配置设备IP
@@ -42,7 +50,7 @@ export default class PeiZhi extends Component {
                         </Col>
                     </Row>
                 </div>
-                <Ttable name={this.state.name} type={this.state.type} IPaddress={this.state.IPaddress} MACaddress={this.state.MACaddress}/>
+                <Ttable data={this.state.data}/>
                 <Add isAdd={this.state.isAdd} getMsg={this.getMsg.bind(this)}/>
             </div>
         )

@@ -7,6 +7,8 @@ import 'antd/dist/antd.css';
 import AlertOne from './alertOne'
 import AlertTwo from './alertTwo';
 
+import { SettingFilled } from '@ant-design/icons';
+
 export default class index extends Component {
     constructor(props){
         super(props)
@@ -44,6 +46,7 @@ export default class index extends Component {
         return (
             <div className='container'>
                 <div className='header'>
+                <SettingFilled style={{ color:'#BBE8E2'}} onClick={()=>{this.props.history.push('/peizhi')}}/>
                     电网总控
                     <img className='point' src={require("../images/guanjiGreen.png")} alt=""/>
                 </div>
